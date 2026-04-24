@@ -21,11 +21,11 @@
   -d '{"text": "Win $1000 now! Click: bit.ly/xyz", "technique": "cot-few-shot"}'``
 ### 3. Запрос отчёта ответов модели по метрикам на 100 запросов
 
-``python3 scripts/evaluate.py --samples 100```
+``python3 scripts/evaluate.py --samples 100``
 
 ### 4. Запрос через функции для работы с внешними API
 
-python3 scripts/test_api.py --text "Hey, dinner at 7pm?" --technique cot-few-shot
+``python3 scripts/test_api.py --text "Hey, dinner at 7pm?" --technique cot-few-shot``
 
 
  [Отчёт об запуске LLM на 1000 запросов](docs/report.md). Остальные отчёты расположены в [data](./data).
