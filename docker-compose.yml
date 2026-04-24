@@ -1,0 +1,17 @@
+services:
+  ollama-fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sms_spam_llm_service
+    ports:
+      - "11434:11434"
+      - "8000:8000"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
